@@ -25,6 +25,7 @@
       <!-- Tweaks for older IEs-->
       <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script async src="https://api.countapi.xyz/hit/codefoxx.com/c935f961-313f-4784-a54a-55beb5d82922?callback=websiteVisits"></script>
       <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
@@ -178,6 +179,7 @@
                   <div class="col-md-7">
                      <div class="titlepage">
                         <h2>About <span class="blu">Software</span></h2>
+                        <h1>People Visits<span id="visits"></span>Times</h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit </p>
                         <a class="read_more">Read More</a>
                      </div>
@@ -424,6 +426,13 @@
              icon: image
            });
          }
+
+         let visits = document.getElementById("visits");
+         function websiteVisits ( response ) {
+            visits.textContent = response.value;
+         }
+
+
       </script>
       <!-- google map js -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
